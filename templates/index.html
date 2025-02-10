@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="shortcut icon" href="static/images/logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="/">
+                    <img src="static/images/logo.jpg" class="logo" alt="logo" > 
+                    Potato Leaf Disease Detection
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <section>
+            <div>
+                <h1>
+                    Potato Leaf Disease Detection
+                </h1>
+                <p>
+                    Upload an image of a potato leaf to detect the disease. This model can detect the following diseases: early blight, late blight, healthy.
+                </p>
+            </div>
+            <div class="image-container">
+                
+                <img src="/static/images/potato.jpg" alt="" id="image-preview">
+            </div>
+
+
+            <div>
+                <div class="form-container">
+                    <form onsubmit="handleSubmit(event)">
+
+                        <input type="file" name="image" id="image" accept="image/*" hidden onchange="handleFileChange(event)">
+                        <label for="image">
+                            Choose a file
+                        </label>
+                        <p id="file-name"></p>
+                        <button type="submit">
+                            Upload image
+                        </button>
+            
+                    </form>
+                </div>
+            </div>
+            
+            <div class="loader-container" id="loader">
+                <div class="loader"></div>
+            </div>
+
+            <div class="result-container">
+                <div>
+                    <h2>
+                        Result
+                    </h2>
+                    <div class="result" id="result">
+                        <p>
+                            Upload an image to get the result
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+       
+
+    </main>
+
+    <script src="static/scripts/script.js"></script>
+</body>
+</html>
